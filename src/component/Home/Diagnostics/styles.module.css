@@ -1,0 +1,21 @@
+.diagnosticsSec {
+    padding: 20px 0;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.border-left-blue {
+    border-left: 5px solid #2A3B77;
+}
+
+.bg-light-blue {
+    background-color: #f0f7ff;
+}

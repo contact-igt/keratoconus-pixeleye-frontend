@@ -1,0 +1,14 @@
+.keratoconusSec {
+    padding: 60px 0;
+}
+
+.imageWrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover {
+    transform: translateY(-5px);
+}

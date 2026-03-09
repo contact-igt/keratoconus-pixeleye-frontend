@@ -8,7 +8,7 @@ const WhyChoose = ({ chooselist , handleTogglecontactForm }) => {
       <div>
         <Title title={HomeData?.whyChoosePixel?.title} />
         {HomeData?.whyChoosePixel?.subheading && (
-          <p className="text-center text-muted mb-4">{HomeData?.whyChoosePixel?.subheading}</p>
+          <p className="text-start text-muted mb-4">{HomeData?.whyChoosePixel?.subheading}</p>
         )}
 
         <div className={`${styles.choosepoint} commonshadow mt-4 `} onClick={handleTogglecontactForm}>
@@ -23,7 +23,7 @@ const WhyChoose = ({ chooselist , handleTogglecontactForm }) => {
               </div>
             </div>
           ))}
-          <p className="mt-4 p-3 bg-light rounded-3 text-muted small">
+          <p className="mt-4 p-3 bg-light rounded-2 text-muted small">
             {HomeData?.whyChoosePixel?.supportParagraph}
           </p>
         </div>

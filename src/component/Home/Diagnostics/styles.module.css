@@ -1,21 +1,64 @@
 .diagnosticsSec {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .card {
-    transition: all 0.3s ease;
-    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #eef2f7;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(42, 59, 119, 0.08) !important;
+    border-color: #2A3B77;
 }
 
-.border-left-blue {
-    border-left: 5px solid #2A3B77;
-}
-
-.bg-light-blue {
+.iconCircle {
+    width: 44px;
+    height: 44px;
     background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+.card:hover .iconCircle {
+    background-color: #2A3B77;
+}
+
+.supportContainer {
+    margin-top: 40px;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #f7faff;
+    border-left: 6px solid #2A3B77;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.supportIcon {
+    color: #2A3B77;
+    flex-shrink: 0;
+}
+
+.supportText {
+    margin: 0;
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .supportContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 }

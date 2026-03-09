@@ -9,7 +9,7 @@ const HomeBanner = ({ data, statsData }) => {
                     <div className="d-flex col-12 col-lg-5 justify-content-end pb-lg-4 flex-column mb-lg-4 px-4 px-md-0 mb-md-0">
                         {data?.trustLabel && (
                             <div className="mb-2">
-                                <span className="badge bg-primary px-3 py-2 rounded-pill shadow-sm" style={{ fontSize: '0.9rem', fontWeight: '500', backgroundColor: '#2A3B77 !important' }}>
+                                <span className="badge bg-secondary px-3 py-2 rounded-pill shadow-sm" style={{ fontSize: '0.9rem', fontWeight: '500', backgroundColor: '#2A3B77 !important' }}>
                                     {data?.trustLabel}
                                 </span>
                             </div>
@@ -54,16 +54,17 @@ const HomeBanner = ({ data, statsData }) => {
                     <div className="mt-0 col-12 col-lg-5 d-flex justify-content-center">
                         <div className={styles.bannerWrapper}>
                             <Image
-                                src="/assets/bannerImage.webp"
+                                src="/assets/bannerImage-1.webp"
                                 alt="Banner"
                                 fill
+                                quality={100}
                                 style={{
                                     objectFit: 'cover',
                                     display: 'block',
                                     top: '0',
                                     left: '0',
                                 }}
-                                sizes="(max-width: 768px) 100vw, 300px"
+                                sizes="(max-width: 768px) 100vw, 700px"
                                 priority={true}
                                 className={styles.bannerimage}
                             />

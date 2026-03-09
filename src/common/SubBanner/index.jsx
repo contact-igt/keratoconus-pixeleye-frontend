@@ -35,7 +35,7 @@ const SubBanner = ({
           border: ` 1px solid ${bordercolor}`,
         }}
       >
-        <div className="row gap-5 gap-md-0">
+        <div className="row gap-5 gap-md-0 align-items-center">
           <div className="col-lg-7">
             <div className={styles.subcontent}>
               <h4>
@@ -57,21 +57,21 @@ const SubBanner = ({
               />
             </div>
           </div>
-          <div className={`${styles.imageContainer} col-lg-5 d-flex align-items-start justify-content-start`} style={{ position: 'relative', height: height ? height : "180px" }}>
-              <Image
-                src={img ? img : '/placeholder.jpg'}
-                alt="sub-banner-img"
-                fill={true}
-                style={{
-                  objectFit: 'cover',
-                  maxWidth: "100%",
-                  transform: `scale(${scale})`,
-                  objectPosition: 'center center'
-                }}
-                sizes="(max-width: 768px) 100vw, 300px"
-                className={styles.subBannerImg}
-                priority={true}
-              />
+          <div className={`${styles.imageContainer} col-lg-5 d-flex align-items-center justify-content-center`} style={{ position: 'relative', height: height ? height : "180px" }}>
+            <Image
+              src={img ? img : '/placeholder.jpg'}
+              alt="sub-banner-img"
+              fill={true}
+              style={{
+                objectFit: 'cover',
+                maxWidth: "100%",
+                transform: `scale(${scale})`,
+                objectPosition: 'center center'
+              }}
+              sizes="(max-width: 768px) 100vw, 300px"
+              className={styles.subBannerImg}
+              priority={true}
+            />
           </div>
         </div>
       </div>

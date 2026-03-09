@@ -69,13 +69,11 @@ const RightSticky = () => {
       const newFormData = {
         PatientName: formData?.PatientName,
         MobileNumber: formData.MobileNumber,
-        City: formData.City || "",
-        PreferredBranch: formData.PreferredBranch || "",
         IP_Address: ipData.ip,
         utm_source: localStorage.getItem("utm_source"),
       }
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycby7HrLM2fJWsnuH8ltC5NK0Jrl-XP6rndAjZ7oF9lApuTcXmqAfRvYPKAUpV6EYy42W/exec",
+        "https://script.google.com/macros/s/AKfycbxICkBYSvFs7eDJFRyf7haHM4hmciLtqtVckJPQajdgp4Oi7um1lHpO_NcaOlfxhvG3aQ/exec",
         {
           method: "POST",
           mode: "no-cors",
@@ -92,8 +90,6 @@ const RightSticky = () => {
         {
           patient_name: formData.PatientName || "Guest Patient",
           mobile_number: formData.MobileNumber,
-          city: formData.City || "Not Provided",
-          preferred_branch: formData.PreferredBranch || "Not Selected",
           service_name: "Keratoconus Treatment",
           email_subject: "Keratoconus Care",
           from_name: "Pixel Eye Hospitals",
@@ -139,28 +135,6 @@ const RightSticky = () => {
             />
           </div>
 
-          <div className="mb-3">
-            <input
-              name="City"
-              type="text"
-              onChange={handleChange}
-              className="form-control rounded-3 py-3"
-              placeholder="City"
-            />
-          </div>
-
-          <div className="mb-1">
-            <select
-              name="PreferredBranch"
-              onChange={handleChange}
-              className="form-select rounded-3 py-3"
-              defaultValue=""
-            >
-              <option value="" disabled>Preferred Branch</option>
-              <option value="Pixel Eye Hospital - Hyderabad">Pixel Eye Hospital - Hyderabad</option>
-              {/* Add other branches here if needed */}
-            </select>
-          </div>
           {error && <p className="mt-2" style={{ color: "#ff6f61" }}>{error}</p>}
           <div className="d-grid mt-4">
             <Button disabled={loading} name={loading ? "Booking..." : "Book Now"} bgcolor="#ff6f61" txtcolor="#fff" />

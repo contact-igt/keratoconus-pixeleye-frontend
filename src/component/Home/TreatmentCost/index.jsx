@@ -12,16 +12,41 @@ const TreatmentCost = ({ handleTogglecontactForm }) => {
 
   return (
     <section className={styles.treatmentsec}>
+      
+      <SubBanner
+        title={earlyCare?.title.split(' ').slice(0, 2).join(' ')}
+        spantitle={earlyCare?.title.split(' ').slice(2).join(' ')}
+        content={
+          <ul className="list-unstyled mt-3">
+            {earlyCare?.items?.map((item, idx) => (
+              <li key={idx} className="mb-2 d-flex align-items-start gap-2">
+                <CheckCircle2 color="#d3863c" size={18} className="mt-1 flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        }
+        bgcolor={"#fef8f1"}
+        spancolor={"#d3863c"}
+        bordercolor={"#eea35cff"}
+        btn_bgcolor={"#cf873d"}
+        btn_name={earlyCare?.cta}
+        btn_txtcolor={"#fff"}
+        isicons={false}
+        isimg={true}
+        img={"/assets/surgeryCost.webp"}
+        handleTogglecontactForm={handleTogglecontactForm}
+      />
     <div>
         <Title title={treatmentOptions?.title} />
         {treatmentOptions?.subheading && (
-          <p className="text-center text-muted mb-4 px-3">{treatmentOptions?.subheading}</p>
+          <p className="text-start text-muted mb-4">{treatmentOptions?.subheading}</p>
         )}
 
-      <div className={`row commonshadow mt-4 mx-3 mx-md-0 ${styles.treat} p-4`}>
+      <div className={`row commonshadow mt-4 mx-3 mx-md-0 ${styles.treat} p-4 mb-3`}>
         {treatmentOptions?.options?.map((data, i) => (
           <div
-            className={` col-lg-3 col-md-6 text-center mb-4 ${styles.treatcard} `}
+            className={` col-lg-6 col-md-6 text-center mb-4 ${styles.treatcard} `}
             key={i}
           >
             <div className={`d-flex justify-content-center`}>
@@ -54,30 +79,6 @@ const TreatmentCost = ({ handleTogglecontactForm }) => {
           />
         </div>
       </div>
-
-      <SubBanner
-        title={earlyCare?.title.split(' ').slice(0, 2).join(' ')}
-        spantitle={earlyCare?.title.split(' ').slice(2).join(' ')}
-        content={
-          <ul className="list-unstyled mt-3">
-            {earlyCare?.items?.map((item, idx) => (
-              <li key={idx} className="mb-2 d-flex align-items-start gap-2">
-                <CheckCircle2 color="#d3863c" size={18} className="mt-1 flex-shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        }
-        bgcolor={"#fef8f1"}
-        spancolor={"#d3863c"}
-        bordercolor={"#eea35cff"}
-        btn_bgcolor={"#cf873d"}
-        btn_name={earlyCare?.cta}
-        btn_txtcolor={"#fff"}
-        isicons={false}
-        isimg={false}
-        handleTogglecontactForm={handleTogglecontactForm}
-      />
 
       <SubBanner
         title={"Talk To"}

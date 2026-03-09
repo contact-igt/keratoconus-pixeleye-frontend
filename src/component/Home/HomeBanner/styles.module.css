@@ -9,10 +9,12 @@
   max-width: 1500px;
   padding: 3.5rem 3rem;
 }
+
 .imgContainer {
   width: 90%;
   min-height: 450px;
 }
+
 .tickIcon {
   background-color: #21a179;
   color: white;
@@ -34,14 +36,12 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(
-    45deg,
-    #ff6b6b,
-    #4ecdc4,
-    #45b7d1,
-    #96ceb4,
-    #feca57
-  );
+  background: linear-gradient(45deg,
+      #ff6b6b,
+      #4ecdc4,
+      #45b7d1,
+      #96ceb4,
+      #feca57);
   border-radius: 22px;
   z-index: -1;
   opacity: 0;
@@ -51,6 +51,7 @@
 .banner-container:hover::before {
   opacity: 1;
 }
+
 .card {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
@@ -72,22 +73,28 @@
   margin: 0;
   color: #333;
 }
+
 .container ul {
   margin-bottom: 0.3rem;
 }
+
 .statItem p {
   width: 80%;
   margin: 0 auto;
   font-size: 14.5px;
   color: #495057;
 }
+
 .bannerWrapper {
   position: relative;
   width: 600px;
   height: 700px;
 }
+
 .bannerimage {
   border-radius: 20px;
+  object-fit: cover;
+  object-position: left center;
 }
 
 @media (max-width: 768px) {
@@ -102,15 +109,19 @@
     height: auto;
     padding: 2.5rem 3rem;
   }
+
   .imgContainer {
     height: 450px;
   }
+
   .consultationBox {
     padding: 1.2rem;
   }
+
   .statNumber {
     font-size: 1.8rem;
   }
+
   .statText {
     font-size: 0.95rem;
   }
@@ -122,18 +133,23 @@
     height: auto;
     padding: 1.5rem 1rem;
   }
+
   .imgContainer {
     height: 450px;
   }
+
   .consultationBox {
     padding: 1rem;
   }
+
   .statNumber {
     font-size: 1.6rem;
   }
+
   .statText {
     font-size: 0.9rem;
   }
+
   .bannerimage {
     width: 100%;
   }
@@ -144,24 +160,30 @@
     min-height: 550px;
     padding: 3rem 2rem;
   }
+
   .imgContainer {
     width: 100%;
     height: 500px;
   }
+
   .consultationBox {
     border-radius: 10px;
   }
+
   .title {
     width: 80%;
   }
+
   .card {
     width: 70%;
     border-radius: 16px;
     padding: 1.5rem !important;
   }
+
   .statNumber {
     font-size: 1.5rem;
   }
+
   /* .statItem {
     border-right: none !important;
     border-bottom: 1px solid #dee2e6;
@@ -179,29 +201,36 @@
     height: auto;
     padding: 3rem 0rem;
   }
+
   .title {
     width: 90%;
   }
+
   .consultationBox {
     padding: 1rem;
     text-align: center;
   }
+
   .tickIcon {
     width: 20px;
     height: 20px;
     font-size: 12px;
   }
+
   .card {
     border-radius: 14px;
     width: 90%;
     padding: 1.2rem !important;
   }
+
   .statItem h2 {
     font-size: 2rem !important;
   }
+
   .statNumber {
     font-size: 1.6rem;
   }
+
   .statText {
     font-size: 0.85rem;
   }
@@ -211,29 +240,36 @@
   .container {
     padding: 2.5rem 0rem 0;
   }
+
   .title {
     width: 100%;
   }
+
   .consultationBox {
     padding: 0.8rem;
     border-radius: 8px;
   }
+
   .tickIcon {
     min-width: 20px;
     min-height: 18px;
     font-size: 11px;
   }
+
   .container ul li {
     font-size: 17px !important;
   }
+
   .card {
     width: 100%;
     border-radius: 12px;
     padding: 1rem !important;
   }
+
   .statNumber {
     font-size: 1.2rem;
   }
+
   .statText {
     font-size: 0.8rem;
   }

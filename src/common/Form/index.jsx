@@ -72,7 +72,7 @@ const Form = ({ handleTogglecontactForm, title }) => {
       }
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycby7HrLM2fJWsnuH8ltC5NK0Jrl-XP6rndAjZ7oF9lApuTcXmqAfRvYPKAUpV6EYy42W/exec",
+        "https://script.google.com/macros/s/AKfycbxICkBYSvFs7eDJFRyf7haHM4hmciLtqtVckJPQajdgp4Oi7um1lHpO_NcaOlfxhvG3aQ/exec",
         {
           method: "POST",
           mode: "no-cors",

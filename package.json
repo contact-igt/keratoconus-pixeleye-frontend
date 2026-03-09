@@ -17,7 +17,7 @@
     "react-dom": "19.1.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "vercel": "^47.0.4"
+    "vercel": "^47.1.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

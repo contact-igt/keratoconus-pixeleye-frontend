@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import TestimonialCard from "@/common/TestimonialCard";
 import { useState } from "react";
 import { Popup } from "@/common/Popup";
-
 import { HomeData } from "@/constant/Home";
 
 const PatientSay = ({ handleTogglecontactForm }) => {
@@ -85,9 +84,9 @@ const PatientSay = ({ handleTogglecontactForm }) => {
       <div>
         <Title title={HomeData?.videoTestimonials?.title} />
         {HomeData?.videoTestimonials?.subheading && (
-          <p className="text-center text-muted mb-4">{HomeData?.videoTestimonials?.subheading}</p>
+          <p className="text-start text-muted mb-4">{HomeData?.videoTestimonials?.subheading}</p>
         )}
-        <div className={` ${styles.testimonalsec}`}>
+        {/* <div className={` ${styles.testimonalsec}`}>
           <div className={styles.testimonialContainer}>
             <Slider {...settings} className={styles.sliderWrapper}>
               {videoData?.map((item, index) => (
@@ -103,25 +102,25 @@ const PatientSay = ({ handleTogglecontactForm }) => {
               ))}
             </Slider>
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-5">
-           <Title title={HomeData?.writtenTestimonials?.title} />
-           <div className="row g-4 mt-2">
-             {writtenData.map((review, idx) => (
-               <div key={idx} className="col-md-4">
-                 <div className={`${styles.patientcard} commonshadow h-100`}>
-                   <div className="d-flex align-items-center gap-1 mb-2">
-                     {[...Array(review.rating)].map((_, i) => (
-                       <Star key={i} width={18} color="#fdbf01" fill="#fdbf01" />
-                     ))}
-                   </div>
-                   <p className="mb-3">“{review.content}”</p>
-                   <h6 className="m-0">— {review.author}</h6>
-                 </div>
-               </div>
-             ))}
-           </div>
+          <Title title={HomeData?.writtenTestimonials?.title} />
+          <div className="row g-4 mt-2">
+            {writtenData.map((review, idx) => (
+              <div key={idx} className="col-md-4">
+                <div className={`${styles.patientcard} commonshadow h-100`}>
+                  <div className="d-flex align-items-center gap-1 mb-2">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} width={18} color="#fdbf01" fill="#fdbf01" />
+                    ))}
+                  </div>
+                  <p className="mb-3">“{review.content}”</p>
+                  <h6 className="m-0">— {review.author}</h6>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className={`${styles.patientcard} commonshadow mt-5`}>
@@ -145,7 +144,7 @@ const PatientSay = ({ handleTogglecontactForm }) => {
               <Star width={22} color="#fdbf01" fill="#fdbf01" />
               <Star width={22} color="#fdbf01" fill="#fdbf01" />
             </div>
-            <p className="m-0">{`(3,222 Reviews)`}</p>
+            <p className="m-0">{`(3,225 Reviews)`}</p>
           </div>
 
           <Button

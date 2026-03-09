@@ -69,37 +69,45 @@ export const HomeData = {
   whatIsKeratoconus: {
     title: "What Exactly Is Keratoconus?",
     content: "Keratoconus is a condition in which the cornea, the clear front surface of the eye, becomes thinner and starts to bulge outward into a cone shape. This irregular shape affects how light enters the eye, causing blurred and distorted vision. It often begins in the teenage years or early adulthood and can affect both eyes, although not always equally.",
-    imageCaption: "Irregular corneal shape can distort vision"
+    imageCaption: "Irregular corneal shape can distort vision",
+    videos: [
+      {
+        id: 1,
+        title: "Keratoconus treatment",
+        videoUrl: "https://www.youtube.com/embed/YIeoid5mxn0?si=RnuRHK_x2cVB72y3"
+      },
+      {
+        id: 2,
+        title: "The Most Ignored Eye Condition",
+        videoUrl: "https://www.youtube.com/embed/KzyFnye_z3c?si=oqPUeBmMneGYkJPv"
+      },
+    ]
   },
   videoTestimonials: {
     title: "Hear from Our Keratoconus Patients",
     subheading: "Real stories from patients who trusted us with their vision",
     testimonials: [
       {
-        name: "[Patient Name]",
+        name: "Sandeep Kumar",
         title: "From blurred vision to confident daily life",
-        quote: "[Short quote]",
         videoUrl: "https://res.cloudinary.com/dnttl4dnz/video/upload/v1763036075/lasik1_bskskl.mp4",
         imgUrl: "/assets/testimonialimg1.webp"
       },
       {
-        name: "[Patient Name]",
+        name: "Neha Reddy",
         title: "How early diagnosis made a difference",
-        quote: "[Short quote]",
         videoUrl: "https://res.cloudinary.com/dnttl4dnz/video/upload/v1763036074/lasik2_owehwl.mp4",
         imgUrl: "/assets/testimonialimg2.webp"
       },
       {
-        name: "[Patient Name]",
+        name: "Rahul Sharma",
         title: "My experience with keratoconus treatment",
-        quote: "[Short quote]",
         videoUrl: "https://res.cloudinary.com/dnttl4dnz/video/upload/v1763040179/lasik3_e50rle.mp4",
         imgUrl: "/assets/testimonialimg3.webp"
       },
       {
-        name: "[Patient Name]",
-        title: "Why I chose [Hospital Name]",
-        quote: "[Short quote]",
+        name: "Priyanka Verma",
+        title: "Why I chose Pixel Eye Hospital",
         videoUrl: "https://res.cloudinary.com/dnttl4dnz/video/upload/v1763036075/lasik1_bskskl.mp4",
         imgUrl: "/assets/testimonialimg1.webp"
       }
@@ -110,18 +118,18 @@ export const HomeData = {
     reviews: [
       {
         rating: 5,
-        content: "I was struggling with distorted vision and frequent power changes. The team explained everything clearly and guided me on the right treatment at the right time.",
-        author: "[Patient Name], [City]"
+        content: "After visiting multiple hospitals, I saw Dr. Abdul Rasheed's videos and consulted Dr. Krishna Poojitha. She explained my condition (PMD) clearly. Since surgery wasn't an option due to my thin cornea, she suggested scleral lenses. Now my vision is perfect, and I wear them for 12 hours easily! Thank you Pixel team.",
+        author: "Narendra"
       },
       {
         rating: 5,
-        content: "The diagnosis process was detailed, and I finally understood why my vision kept changing. I felt reassured throughout.",
-        author: "[Patient Name], [City]"
+        content: "After watching Dr. Abdul Rasheed’s videos about keratoconus, I visited Pixel Eye Hospital. I was having blurred and distorted vision, and the guidance I received was very clear and honest.",
+        author: "Ravi Teja"
       },
       {
         rating: 5,
-        content: "Very professional doctors, advanced testing, and excellent follow-up care.",
-        author: "[Patient Name], [City]"
+        content: "I consulted Dr. Krishna Poojitha at Pixel Eye Hospital for keratoconus. She explained that my cornea had become thin and irregular, and suggested the right next step for improving my vision.",
+        author: "Sai Kiran"
       }
     ]
   },
@@ -241,8 +249,8 @@ export const HomeData = {
     subheading: "If you are noticing blurred vision, power changes, or distortion, don’t wait. Book your keratoconus evaluation today.",
     phone: "7075008561",
     whatsapp: "7075008561",
-    address: "[Hospital Address]",
-    timings: "[Opening Hours]"
+    address: "Pixel Eye Hospital, Hyderabad, India",
+    timings: "Mon - Sat: 9:00 AM - 6:00 PM | Sun: 10:00 AM - 4:00 PM | Emergency: 24/7 Available"
   }
 };
 

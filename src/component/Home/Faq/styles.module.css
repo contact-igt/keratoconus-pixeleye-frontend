@@ -26,7 +26,8 @@
 
 }
 
-.footercta a,.footercta button {
+.footercta a,
+.footercta button {
     width: 100% !important;
 }
 
@@ -41,27 +42,131 @@
 
 
 
-@media (width < 1200px) {
+.contactCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    border: 1px solid #eef2f6;
+}
+
+.contactCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(42, 59, 119, 0.1);
+    border-color: #2A3B77;
+}
+
+.iconBox {
+    width: 56px;
+    height: 56px;
+    background-color: #d3863c;
+    /* Theme orange from treatment icons */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.contactInfo h6 {
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+}
+
+.themeBlueText {
+    color: #2A3B77 !important;
+    font-weight: 700;
+}
+
+.noteText {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.hoursBox {
+    background: #ffffff;
+    border: 2px solid #2A3B77;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hoursTitle {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.clockIcon {
+    color: #2A3B77;
+}
+
+.hourRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.hourRow:last-child {
+    border-bottom: none;
+}
+
+.dayLabel {
+    font-weight: 500;
+    color: #334155;
+    flex: 1;
+}
+
+.timeVal {
+    font-weight: 700;
+    color: #0f172a;
+    flex: 2;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.emergency {
+    color: #21a179 !important;
+    /* Theme green from chat buttons */
+}
+
+@media (max-width: 1200px) {
     .question button {
         font-size: 18px;
     }
-
-
 }
 
-@media(width < 768px){
-      .stablediv {
+@media(max-width: 768px) {
+    .stablediv {
         position: fixed;
         left: 0;
         bottom: 0px;
         width: 100%;
         background-color: #fff;
         padding: 20px;
-      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.10);
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.10);
+    }
+
+    .hourRow {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .timeVal {
+        padding-left: 0;
     }
 }
 
-@media (width < 576px) {
+@media (max-width: 576px) {
     .footerctastable {
         display: block;
         position: fixed;
@@ -71,5 +176,4 @@
     .footercta {
         display: none !important;
     }
-
 }

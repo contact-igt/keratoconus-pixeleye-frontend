@@ -14,7 +14,7 @@ const Thankyou = () => {
 
             <div className={`${styles.videoContainer} mt-4`}>
                 <iframe
-                    src="https://www.youtube.com/embed/DJXRQDws02I"
+                    src="https://www.youtube.com/embed/eEiLvPNrSyY?si=Ig0AnFojoG-W5ltk"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -28,7 +28,7 @@ const Thankyou = () => {
                     <li>
                         Our team will call or message you within 24 hours.
                     </li>
-                    <li>Prepare your questions about LASIK surgery.</li>
+                    <li>Prepare your questions about Ket</li>
                 </ul>
             </div>
             <div className="mt-4">

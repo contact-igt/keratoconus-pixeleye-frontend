@@ -10,6 +10,11 @@ export const HomeData = {
       "Expert Keratoconus Specialists",
       "Comprehensive Treatment Plans",
     ],
+    images: [
+      "/assets/bannerImage1.JPG",
+      "/assets/bannerImage2.JPG",
+      "/assets/bannerImage3.JPG",
+    ],
   },
   stats: [
     {

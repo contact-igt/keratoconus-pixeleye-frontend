@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import Button from "@/common/Button";
 import emailjs from "emailjs-com";
 import { useRouter } from "next/router";
+import { submitWebsiteLead } from "@/lib/leadSubmission";
 
 const RightSticky = () => {
   const router = useRouter();
@@ -32,11 +33,13 @@ const RightSticky = () => {
     }
     try {
       setLoading(true);
-      const ipResponse = await fetch("https://api.ipify.org?format=json");
-      const ipData = await ipResponse.json();
+      await submitWebsiteLead({
+        patientName: formData?.PatientName,
+        mobileNumber: formData.MobileNumber,
+        service: "Keratoconus",
+      });
 
-
-            await fetch(
+      await fetch(
         "https://www.privyr.com/api/v1/incoming-leads/0vZfjMQw/xKtkqD5A",
         {
           method: "POST",
@@ -50,55 +53,6 @@ const RightSticky = () => {
             source: "Keratoconus Landing Page",
           }),
         },
-      );
-
-
-      //   const registerFormData = {
-      //     name: formData?.PatientName,
-      //     mobile: formData.MobileNumber,
-      //     ip_address: ipData.ip,
-      //     utm_source: localStorage.getItem("utm_source"),
-      //     page_name: "lasik",
-      //   }
-
-      //  const APISERVER =
-      //     process.env.NEXT_PUBLIC_API_SERVER === "production"
-      //       ? process.env.NEXT_PUBLIC_PRODUCTION_API_URL
-      //       : process.env.NEXT_PUBLIC_API_SERVER === "stage"
-      //         ? process.env.NEXT_PUBLIC_STAGE_API_URL
-      //         : process.env.NEXT_PUBLIC_LOCALHOST_API_URL;
-      //   const registerResponse = await fetch(
-      //     `${APISERVER}/pixel-eye`,
-      //     {
-      //       method: "POST",
-      //       headers: {
-      //         "Content-Type": "application/x-www-form-urlencoded",
-      //       },
-      //       body: new URLSearchParams(registerFormData).toString(),
-      //     }
-      //   );
-
-      //   if (!registerResponse.ok) {
-      //     setError("Something went wrong. Please try again.");
-      //     setLoading(false);
-      //     return;
-      //   }
-      const newFormData = {
-        PatientName: formData?.PatientName,
-        MobileNumber: formData.MobileNumber,
-        IP_Address: ipData.ip,
-        utm_source: localStorage.getItem("utm_source"),
-      }
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxICkBYSvFs7eDJFRyf7haHM4hmciLtqtVckJPQajdgp4Oi7um1lHpO_NcaOlfxhvG3aQ/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams(newFormData).toString(),
-        }
       );
 
       await emailjs.send(

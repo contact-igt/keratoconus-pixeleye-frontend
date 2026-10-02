@@ -11,9 +11,9 @@ export const HomeData = {
       "Comprehensive Treatment Plans",
     ],
     images: [
-      "/assets/bannerImage1.JPG",
-      "/assets/bannerImage2.JPG",
-      "/assets/bannerImage3.JPG",
+      "/assets/bannerImage1.jpg",
+      "/assets/bannerImage2.jpg",
+      "/assets/bannerImage3.jpg",
     ],
   },
   stats: [

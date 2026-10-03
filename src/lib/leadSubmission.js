@@ -1,8 +1,17 @@
 const DEFAULT_CLIENT_KEY = "pixeleye";
 const DEFAULT_SERVICE_NAME = "Keratoconus";
 
-const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const SOURCE_KEY = "keratoconus";
+
+// Fallback only: used when the backend API call fails.
+const GOOGLE_SCRIPT_URL =
+  process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL ||
+  "https://script.google.com/macros/s/AKfycbzk-Lf3u6xgxD5gWCDkIx3iKn1KJwmyjnCmfvntKFuoV5Hjt0z6HfjCw_7Zl2D6qMsxNw/exec";
+// May be given with or without the /api/v1 suffix.
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL?.trim().replace(
+  /\/+(api\/v1)?\/*$/,
+  "",
+);
 const CLIENT_KEY =
   process.env.NEXT_PUBLIC_CLIENT_KEY?.trim() || DEFAULT_CLIENT_KEY;
 
@@ -81,6 +90,7 @@ export async function submitWebsiteLead({
     name: patientName,
     mobile_number: mobileNumber,
     service,
+    source_key: SOURCE_KEY,
     ip_address: ipAddress,
     utm_source: utmSource,
   };
